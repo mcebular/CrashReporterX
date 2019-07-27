@@ -2,7 +2,7 @@
 
 This is a practically complete rewrite of [MindorksOpenSource](https://github.com/MindorksOpenSource/CrashReporter) crash reporter library.
 
-[![](https://jitpack.io/v/mc0239/CrashReporter.svg)](https://jitpack.io/#mc0239/CrashReporter)
+[![](https://jitpack.io/v/mc0239/CrashReporterX.svg)](https://jitpack.io/#mc0239/CrashReporterX)
 ![API 19+](https://img.shields.io/badge/API-19%2B-informational)
 ![Apache 2.0 license](https://img.shields.io/badge/License-Apache%202.0-informational)
 ![Uses AndroidX](https://img.shields.io/badge/Uses-AndroidX-red)
@@ -33,7 +33,7 @@ repositories {
 
 dependencies {
     // your other deps...
-    implementation 'com.github.mc0239:CrashReporter:latest-version'
+    implementation 'com.github.mc0239:CrashReporter:{{latest-version}}'
 }
 ```
 
