@@ -7,7 +7,7 @@ This is a practically complete rewrite of [MindorksOpenSource](https://github.co
 ![Apache 2.0 license](https://img.shields.io/badge/License-Apache%202.0-informational)
 ![Uses AndroidX](https://img.shields.io/badge/Uses-AndroidX-red)
 
-![Sample screenshots](https://raw.githubusercontent.com/mc0239/CrashReporter/master/screenshot.jpg)
+![Sample screenshots](https://raw.githubusercontent.com/mc0239/CrashReporterX/master/screenshots.jpg)
 
 ## Why CrashReporter? 
 
