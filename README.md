@@ -70,11 +70,11 @@ While runtime exceptions that result in a crash are saved automatically, you can
 
 ```java
 try {
-	// ...
-	throwsException();
-	// ...
+    // ...
+    throwsException();
+    // ...
 } catch (Exception e) {
-	CrashReporter.reportException(e);
+    CrashReporter.reportException(e);
 }
 ```
 
