@@ -64,6 +64,8 @@ Intent i = CrashReporter.getLaunchIntent(context);
 startActivity(i);
 ```
 
+**Note:** You _must_ call `CrashReporter.initialize()` in your application, otherwise calling `CrashReporter.getLaunchIntent()` will result in a crash.
+
 ### Reporting caught exceptions
 
 While runtime exceptions that result in a crash are saved automatically, you can also save a report about an Exception that was caught. In the catch block, call `CrashReporter.reportException()` to save a crash report about the exception:
@@ -77,6 +79,8 @@ try {
     CrashReporter.reportException(e);
 }
 ```
+
+**Note:** You _must_ call `CrashReporter.initialize()` in your application, otherwise calling `CrashReporter.reportException()` will result in a crash.
 
 # License
 
