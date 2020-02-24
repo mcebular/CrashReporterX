@@ -1,8 +1,8 @@
 # CrashReporter
 
-This is a practically complete rewrite of [MindorksOpenSource](https://github.com/MindorksOpenSource/CrashReporter) crash reporter library.
+This is a practically complete rewrite of [MindorksOpenSource/CrashReporter](https://github.com/MindorksOpenSource/CrashReporter) library.
 
-[![](https://jitpack.io/v/mc0239/CrashReporter.svg)](https://jitpack.io/#mc0239/CrashReporter)
+[![](https://jitpack.io/v/mc0239/CrashReporterX.svg)](https://jitpack.io/#mc0239/CrashReporterX)
 ![API 19+](https://img.shields.io/badge/API-19%2B-informational)
 ![Apache 2.0 license](https://img.shields.io/badge/License-Apache%202.0-informational)
 ![Uses AndroidX](https://img.shields.io/badge/Uses-AndroidX-red)
@@ -23,7 +23,7 @@ There's a sample app available in `app/` folder for you to try out CrashReporter
 
 ### Initilaizing CrashReporter
 
-1. Add Jitpack to repositories in `build.gradle` and add ComboBox dependency to dependencies:
+1. Add Jitpack to repositories in `build.gradle` and add CrashReporter dependency to dependencies:
 
 ```gradle
 repositories {
@@ -33,7 +33,7 @@ repositories {
 
 dependencies {
     // your other deps...
-    implementation 'com.github.mc0239:CrashReporter:latest-version'
+    implementation 'com.github.mc0239:CrashReporter:{{latest-version}}'
 }
 ```
 
@@ -64,19 +64,23 @@ Intent i = CrashReporter.getLaunchIntent(context);
 startActivity(i);
 ```
 
+**Note:** You _must_ call `CrashReporter.initialize()` in your application, otherwise calling `CrashReporter.getLaunchIntent()` will result in a crash.
+
 ### Reporting caught exceptions
 
 While runtime exceptions that result in a crash are saved automatically, you can also save a report about an Exception that was caught. In the catch block, call `CrashReporter.reportException()` to save a crash report about the exception:
 
 ```java
 try {
-	// ...
-	throwsException();
-	// ...
+    // ...
+    throwsException();
+    // ...
 } catch (Exception e) {
-	CrashReporter.reportException(e);
+    CrashReporter.reportException(e);
 }
 ```
+
+**Note:** You _must_ call `CrashReporter.initialize()` in your application, otherwise calling `CrashReporter.reportException()` will result in a crash.
 
 # License
 
