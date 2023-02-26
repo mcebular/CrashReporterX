@@ -1,4 +1,7 @@
 apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
+
+ext.artifactId = 'CrashReporterX'
 
 android {
     namespace 'net.cebular.crashreporter'
@@ -23,4 +26,51 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
+}
+
+task sourceJar(type: Jar) {
+    classifier = 'sources'
+    from android.sourceSets.main.java.srcDirs
+}
+
+project.afterEvaluate {
+    publishing {
+        publications {
+            maven(MavenPublication) {
+                artifact bundleReleaseAar
+                artifactId project.artifactId
+
+                artifact sourceJar
+
+                pom {
+                    name = project.artifactId
+                    description = 'Catch, save & share android application crashes and other exceptions.'
+                    url = 'https://github.com/mcebular/CrashReporterX'
+
+                    licenses {
+                        license {
+                            name = 'The Apache License, Version 2.0'
+                            url = 'https://github.com/mcebular/CrashReporterX/blob/master/LICENSE'
+                        }
+                    }
+                }
+
+                pom.withXml {
+                    // HACK to add dependencies to POM.
+                    // When maven-publish can do this automatically for Android projects,
+                    // remove this section.
+                    def deps = asNode().appendNode('dependencies')
+
+                    project.configurations.api.allDependencies.each { dep ->
+                        def node = deps.appendNode('dependency')
+                        node.appendNode('groupId', dep.group)
+                        node.appendNode('artifactId', dep.name)
+                        node.appendNode('version', dep.version)
+                        node.appendNode('scope', 'api')
+                    }
+
+                }
+            }
+        }
+    }
 }
