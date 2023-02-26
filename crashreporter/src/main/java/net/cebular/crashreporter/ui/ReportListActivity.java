@@ -1,4 +1,4 @@
-package net.iamsilver.crashreporter.ui;
+package net.cebular.crashreporter.ui;
 
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
@@ -10,9 +10,9 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import net.iamsilver.crashreporter.R;
-import net.iamsilver.crashreporter.adapter.MainPagerAdapter;
-import net.iamsilver.crashreporter.utils.Constants;
+import net.cebular.crashreporter.R;
+import net.cebular.crashreporter.adapter.MainPagerAdapter;
+import net.cebular.crashreporter.utils.Constants;
 
 public class ReportListActivity extends AppCompatActivity {
 

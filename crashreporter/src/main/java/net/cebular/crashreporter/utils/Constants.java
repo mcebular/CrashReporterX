@@ -1,4 +1,4 @@
-package net.iamsilver.crashreporter.utils;
+package net.cebular.crashreporter.utils;
 
 /**
  * Created by bali on 15/08/17.

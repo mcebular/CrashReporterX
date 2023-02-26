@@ -1,4 +1,4 @@
-package net.iamsilver.crashreporter.utils;
+package net.cebular.crashreporter.utils;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -12,8 +12,8 @@ import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
 
-import net.iamsilver.crashreporter.CrashReporter;
-import net.iamsilver.crashreporter.R;
+import net.cebular.crashreporter.CrashReporter;
+import net.cebular.crashreporter.R;
 
 import static android.content.Context.NOTIFICATION_SERVICE;
 

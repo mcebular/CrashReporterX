@@ -1,12 +1,12 @@
-package net.iamsilver.crashreporter.adapter;
+package net.cebular.crashreporter.adapter;
 
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import net.iamsilver.crashreporter.ui.ReportsFragment;
-import net.iamsilver.crashreporter.utils.Constants;
+import net.cebular.crashreporter.ui.ReportsFragment;
+import net.cebular.crashreporter.utils.Constants;
 
 /**
  * Created by bali on 11/08/17.

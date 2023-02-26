@@ -1,4 +1,4 @@
-package net.iamsilver.crashreporter.adapter;
+package net.cebular.crashreporter.adapter;
 
 import android.content.Context;
 import androidx.annotation.NonNull;
@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import net.iamsilver.crashreporter.R;
+import net.cebular.crashreporter.R;
 
 import java.io.BufferedReader;
 import java.io.File;

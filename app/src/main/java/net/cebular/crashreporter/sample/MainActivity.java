@@ -1,10 +1,10 @@
-package net.iamsilver.crashreporter.sample;
+package net.cebular.crashreporter.sample;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 
-import net.iamsilver.crashreporter.CrashReporter;
+import net.cebular.crashreporter.CrashReporter;
 
 import java.io.IOException;
 

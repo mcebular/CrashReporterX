@@ -1,4 +1,4 @@
-package net.iamsilver.crashreporter.exception;
+package net.cebular.crashreporter.exception;
 
 public class CrashReporterException extends RuntimeException {
 

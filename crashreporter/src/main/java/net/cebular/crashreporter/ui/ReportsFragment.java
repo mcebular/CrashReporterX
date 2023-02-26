@@ -1,4 +1,4 @@
-package net.iamsilver.crashreporter.ui;
+package net.cebular.crashreporter.ui;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,10 +14,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import net.iamsilver.crashreporter.R;
-import net.iamsilver.crashreporter.adapter.ReportsAdapter;
-import net.iamsilver.crashreporter.utils.Constants;
-import net.iamsilver.crashreporter.utils.CrashUtils;
+import net.cebular.crashreporter.R;
+import net.cebular.crashreporter.adapter.ReportsAdapter;
+import net.cebular.crashreporter.utils.Constants;
+import net.cebular.crashreporter.utils.CrashUtils;
 
 import java.io.File;
 import java.util.ArrayList;

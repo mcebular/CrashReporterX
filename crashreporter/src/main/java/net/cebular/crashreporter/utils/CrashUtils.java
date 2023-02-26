@@ -1,8 +1,8 @@
-package net.iamsilver.crashreporter.utils;
+package net.cebular.crashreporter.utils;
 
 import android.util.Log;
 
-import net.iamsilver.crashreporter.CrashReporter;
+import net.cebular.crashreporter.CrashReporter;
 
 import java.io.File;
 import java.io.FilenameFilter;

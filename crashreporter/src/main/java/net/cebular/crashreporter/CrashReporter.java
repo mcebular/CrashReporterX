@@ -1,14 +1,14 @@
-package net.iamsilver.crashreporter;
+package net.cebular.crashreporter;
 
 import android.content.Context;
 import android.content.Intent;
 import androidx.annotation.NonNull;
 
-import net.iamsilver.crashreporter.exception.CrashReporterException;
-import net.iamsilver.crashreporter.ui.ReportListActivity;
-import net.iamsilver.crashreporter.utils.AppUtils;
-import net.iamsilver.crashreporter.utils.CrashUtils;
-import net.iamsilver.crashreporter.utils.NotificationUtils;
+import net.cebular.crashreporter.exception.CrashReporterException;
+import net.cebular.crashreporter.ui.ReportListActivity;
+import net.cebular.crashreporter.utils.AppUtils;
+import net.cebular.crashreporter.utils.CrashUtils;
+import net.cebular.crashreporter.utils.NotificationUtils;
 
 public class CrashReporter {
 

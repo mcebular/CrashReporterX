@@ -1,4 +1,4 @@
-package net.iamsilver.crashreporter.utils;
+package net.cebular.crashreporter.utils;
 
 import android.os.Environment;
 import android.util.Log;
@@ -10,7 +10,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-import static net.iamsilver.crashreporter.utils.CrashUtils.getCrashReportsPath;
+import static net.cebular.crashreporter.utils.CrashUtils.getCrashReportsPath;
 
 /**
  * Created by bali on 10/08/17.

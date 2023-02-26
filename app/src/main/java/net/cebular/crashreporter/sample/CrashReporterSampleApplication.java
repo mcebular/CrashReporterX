@@ -1,8 +1,8 @@
-package net.iamsilver.crashreporter.sample;
+package net.cebular.crashreporter.sample;
 
 import android.app.Application;
 
-import net.iamsilver.crashreporter.CrashReporter;
+import net.cebular.crashreporter.CrashReporter;
 
 /**
  * Created by bali on 02/08/17.

@@ -1,10 +1,10 @@
-package net.iamsilver.crashreporter.utils;
+package net.cebular.crashreporter.utils;
 
 import android.content.Context;
 import android.os.Build;
 import android.preference.PreferenceManager;
 
-import net.iamsilver.crashreporter.BuildConfig;
+import net.cebular.crashreporter.BuildConfig;
 
 import java.util.TimeZone;
 import java.util.UUID;
@@ -22,9 +22,10 @@ public class AppUtils {
                 "INSTALLATION_ID=" + getInstallID(context) + "\n" +
 
                 "APP:BUILD_TYPE=" + BuildConfig.BUILD_TYPE + "\n" +
-                "APP:FLAVOR=" + BuildConfig.FLAVOR + "\n" +
-                "APP:VERSION_CODE=" + BuildConfig.VERSION_CODE + "\n" +
-                "APP:VERSION_NAME=" + BuildConfig.VERSION_NAME + "\n" +
+                // TODO these do not work anymore in the lib, must be provided by App's BuildConfig.
+                // "APP:FLAVOR=" + BuildConfig.FLAVOR + "\n" +
+                // "APP:VERSION_CODE=" + BuildConfig.VERSION_CODE + "\n" +
+                // "APP:VERSION_NAME=" + BuildConfig.VERSION_NAME + "\n" +
 
                 "OS:CODENAME=" + Build.VERSION.CODENAME + "\n" +
                 "OS:INCREMENTAL=" + Build.VERSION.INCREMENTAL + "\n" +
