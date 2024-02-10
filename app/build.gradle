@@ -7,7 +7,7 @@ android {
 
     defaultConfig {
         applicationId "net.cebular.crashreporter.sample"
-        minSdkVersion 19
+        minSdkVersion 23
         targetSdkVersion 33
         versionCode 1
         versionName "1.0"
@@ -22,8 +22,6 @@ android {
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
-
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation project(':crashreporter')
 }
