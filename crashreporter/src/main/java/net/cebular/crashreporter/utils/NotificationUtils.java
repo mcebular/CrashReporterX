@@ -83,7 +83,7 @@ public class NotificationUtils {
 
         Intent intent = CrashReporter.getLaunchIntent(CrashReporter.getApplicationContext());
         intent.putExtra(Constants.EXTRA_LANDING, reportType);
-        PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
+        PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_IMMUTABLE);
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, channelId);
 
