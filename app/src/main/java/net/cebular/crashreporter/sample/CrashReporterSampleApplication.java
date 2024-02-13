@@ -4,10 +4,6 @@ import android.app.Application;
 
 import net.cebular.crashreporter.CrashReporter;
 
-/**
- * Created by bali on 02/08/17.
- */
-
 public class CrashReporterSampleApplication extends Application {
 
     @Override
@@ -15,8 +11,7 @@ public class CrashReporterSampleApplication extends Application {
         super.onCreate();
 
         if (BuildConfig.DEBUG) {
-            // initialize reporter
-            CrashReporter.initialize(this);
+            CrashReporter.initialize(this, true);
         }
     }
 }
