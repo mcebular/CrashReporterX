@@ -20,6 +20,8 @@ object CrashReporter {
 
     private const val LOG_TAG = "CrashReporter"
 
+    const val FilenameTimestampDateFormatPattern = "yyyyMMdd-HHmmss"
+
     @JvmStatic
     var applicationContext: Context? = null
         private set
@@ -148,7 +150,7 @@ object CrashReporter {
     }
 
     private fun getFilenameTimestamp(): String {
-        val dateFormat = SimpleDateFormat("yyyyMMdd-HHmmss", Locale.getDefault())
+        val dateFormat = SimpleDateFormat(FilenameTimestampDateFormatPattern, Locale.getDefault())
         return dateFormat.format(Date())
     }
 

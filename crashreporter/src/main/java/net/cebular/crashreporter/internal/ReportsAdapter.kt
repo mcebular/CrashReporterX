@@ -4,13 +4,18 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import net.cebular.crashreporter.CrashReporter
 import net.cebular.crashreporter.databinding.ViewholderReportsAdapterBinding
 import java.io.BufferedReader
 import java.io.File
 import java.io.FileReader
 import java.io.IOException
+import java.text.ParseException
+import java.text.SimpleDateFormat
+import java.util.Locale
 
-class ReportsAdapter(private val onItemClickListener: OnItemClickListener?) : RecyclerView.Adapter<ReportsAdapter.ViewHolder>() {
+class ReportsAdapter(private val onItemClickListener: OnItemClickListener?) :
+    RecyclerView.Adapter<ReportsAdapter.ViewHolder>() {
 
     fun interface OnItemClickListener {
         fun onClick(reportFile: File)
@@ -20,7 +25,8 @@ class ReportsAdapter(private val onItemClickListener: OnItemClickListener?) : Re
 
     class ViewHolder(private val binding: ViewholderReportsAdapterBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(file: File, onItemClickListener: OnItemClickListener?) {
-            binding.textViewReportTime.text = file.name
+
+            binding.textViewReportTime.text = formatFilenameDate(file.name)
             binding.textViewReportSummary.text = file.readFirstLine()
 
             binding.root.setOnClickListener {
@@ -38,6 +44,21 @@ class ReportsAdapter(private val onItemClickListener: OnItemClickListener?) : Re
                 e.printStackTrace()
             }
             return result
+        }
+
+        private fun formatFilenameDate(filename: String): String {
+            if (filename.length < 15) {
+                return filename
+            }
+
+            val date = filename.substring(0, 15)
+            return try {
+                val from = SimpleDateFormat(CrashReporter.FilenameTimestampDateFormatPattern, Locale.getDefault())
+                val to = SimpleDateFormat("dd. MM. yyyy HH:mm:ss", Locale.getDefault())
+                from.parse(date)?.let { to.format(it) } ?: date
+            } catch (e: ParseException) {
+                date
+            }
         }
     }
 
@@ -69,6 +90,7 @@ class ReportsAdapter(private val onItemClickListener: OnItemClickListener?) : Re
         override fun getNewListSize(): Int = curr.size
         override fun areItemsTheSame(prevItemPosition: Int, currItemPosition: Int): Boolean =
             prev[prevItemPosition].name == curr[currItemPosition].name
+
         override fun areContentsTheSame(prevItemPosition: Int, currItemPosition: Int): Boolean = false
     }
 
