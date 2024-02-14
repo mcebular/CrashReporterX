@@ -4,9 +4,9 @@
 
     <item
         android:id="@+id/action_clear_reports"
+        android:icon="@drawable/ic_menu_delete_white_24dp"
         android:orderInCategory="1"
         android:title="@string/menu_clear_reports"
-        android:icon="@drawable/ic_menu_delete_white_24dp"
         app:showAsAction="ifRoom" />
 
 </menu>
