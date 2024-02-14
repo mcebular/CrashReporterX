@@ -35,7 +35,7 @@ class ReportDetailActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        binding.toolbar.title = "Report"
+        binding.toolbar.title = getString(R.string.report_detail_activity_title)
 
         val ok = loadReportFromIntent()
         if (!ok) {

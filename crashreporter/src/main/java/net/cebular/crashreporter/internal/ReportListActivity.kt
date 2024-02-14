@@ -51,10 +51,10 @@ class ReportListActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when(item.itemId) {
-            R.id.action_clear_logs -> {
+            R.id.action_clear_reports -> {
                 AlertDialog.Builder(this)
-                    .setTitle("Clear logs?")
-                    .setMessage("This will permanently remove all logs.")
+                    .setTitle(getString(R.string.alert_dialog_clear_logs_title))
+                    .setMessage(getString(R.string.alert_dialog_clear_logs_message))
                     .setPositiveButton(android.R.string.ok) { dialog, _ ->
                         clearReports()
                     }

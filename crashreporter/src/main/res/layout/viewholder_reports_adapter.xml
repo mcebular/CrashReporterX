@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="12dp"
@@ -11,15 +12,15 @@
         android:layout_height="wrap_content"
         android:paddingBottom="4dp"
         android:textColor="#000"
-        android:text="[timestamp]"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        tools:text="[timestamp]" />
 
     <TextView
         android:id="@+id/textViewReportSummary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:lines="1"
         android:ellipsize="end"
-        android:text="[report summary]" />
+        android:lines="1"
+        tools:text="[report summary]" />
 
 </LinearLayout>

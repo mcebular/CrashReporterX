@@ -26,14 +26,14 @@ fun Context.initNotificationChannels() {
 
     createNotificationChannel(
         CHANNEL_CRASHES,
-        "Crash reports",
-        "Notifications for crash reports",
+        getString(R.string.channel_title_crashes),
+        getString(R.string.channel_description_crashes),
         NotificationManager.IMPORTANCE_DEFAULT
     )
     createNotificationChannel(
         CHANNEL_EXCEPTIONS,
-        "Exception reports",
-        "Notifications for exception reports",
+        getString(R.string.channel_title_exceptions),
+        getString(R.string.channel_description_exceptions),
         NotificationManager.IMPORTANCE_DEFAULT
     )
 }
@@ -64,14 +64,14 @@ fun Context.showReportNotification(text: String?, reportType: ReportType) {
     when (reportType) {
         ReportType.CRASH -> {
             channelId = CHANNEL_CRASHES
-            contentTitle = "View crash report"
-            contentText = contentText ?: "Click here to see crash logs."
+            contentTitle = getString(R.string.notification_title_crash)
+            contentText = contentText ?: getString(R.string.notification_description_crash)
         }
 
         ReportType.EXCEPTION -> {
             channelId = CHANNEL_EXCEPTIONS
-            contentTitle = "View exception report"
-            contentText = contentText ?: "Click here to see exception logs."
+            contentTitle = getString(R.string.notification_title_exception)
+            contentText = contentText ?: getString(R.string.notification_description_exception)
         }
     }
 

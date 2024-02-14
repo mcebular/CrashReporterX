@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="crash_reporter">Poročevalec zrušitev</string>
-    <string name="crashes">Zrušitve</string>
-    <string name="exceptions">Napake</string>
-    <string name="view_crash_report">Poglej poročilo o zrušitvi</string>
-    <string name="check_your_message_here">Klikni tukaj za pregled poročil.</string>
-    <string name="delete_confirmation_msg">Izbrišem vse zapise o zrušitvah?</string>
-    <string name="cancel">Prekliči</string>
-    <string name="ok">V redu</string>
+
+    <string name="channel_title_crashes">Poročila o zrušitvah</string>
+    <string name="channel_description_crashes">Obvestila za poročila o zrušitvah</string>
+    <string name="channel_title_exceptions">Poročila o napakah</string>
+    <string name="channel_description_exceptions">Obvesila za poročila o napakah</string>
+
+    <string name="notification_title_crash">Poglej poročilo o zrušitvi</string>
+    <string name="notification_description_crash">Tapnite tukaj za ogled poročila o zrušitvi.</string>
+    <string name="notification_title_exception">Poglej poročilo o napaki</string>
+    <string name="notification_description_exception">Tapnite tukaj za ogled poročila o napaki.</string>
+
+    <string name="report_detail_activity_title">Poročilo</string>
+
+    <string name="alert_dialog_clear_logs_title">Počisti poročila?</string>
+    <string name="alert_dialog_clear_logs_message">Vsa poročila bodo dokončno izbrisana.</string>
+
+    <string name="menu_clear_reports">Počisti poročila</string>
+    <string name="menu_share_report">Deli poročilo</string>
+    <string name="menu_delete_report">Izbriši poročilo</string>
 </resources>
